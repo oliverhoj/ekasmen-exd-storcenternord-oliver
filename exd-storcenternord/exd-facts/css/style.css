@@ -119,3 +119,226 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+
+
+.gul-kirurgfisk {
+  position: absolute;
+  width: 20px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: 400px; /* placeret nede */
+  right: 150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 10s linear infinite;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.gul-kirurgfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+.dvaergkejserfisk {
+   position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -660px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  linear infinite;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.dvaergkejserfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+
+.paletkirurgfisk {
+   position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -700px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  linear infinite;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.paletkirurgfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+
+.klovnfisk {
+   position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -100px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  linear infinite;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.klovnfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+.pudsefisk {
+  position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -200px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s   infinite reverse;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.pudsefisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+
+.hvidstrubet-kirurgfisk {
+  position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -300px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  linear infinite;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.hvidstrubet-kirurgfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+.pincetfisk {
+    position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -500px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  infinite reverse;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.pincetfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
+
+
+
+
+
+.sortbaandet-kirurgfisk {
+  /* vil have den til at svømme fra højre mod venstre */
+  position: absolute;
+  width: 70px; /* gør fisken mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: -400px; /* placeret nede */
+  right: -150px; /* placeret i højre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 3; /* sørg for den ligger over baggrunden */
+  animation: fish-swim 20s  infinite reverse;
+}
+
+@keyframes fish-swim {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.sortbaandet-kirurgfisk img {
+  max-width: 600%; /* ændre str på fisken */
+  height: auto; /* bevar proportioner */
+}
