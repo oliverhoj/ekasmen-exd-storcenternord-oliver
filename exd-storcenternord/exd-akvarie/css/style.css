@@ -159,7 +159,7 @@ body {
   bottom: 16px; /* placeret nede */
   left: 40px; /* placeret i venstre hjørne */
   transform: none; /* fjern tidligere translate */
-  z-index: 3; /* sørg for den ligger over baggrunden */
+  z-index: 1; /* sørg for den ligger over baggrunden */
 }
 
 .image-skattekiste img {
@@ -180,6 +180,22 @@ body {
 .pirat img {
   max-width: 100vw;
   height: 90vh;
+}
+
+
+.koral {
+  position: absolute;
+  width: 20px; /* gør kisten mindre */
+  max-width: 20vw; /* skalerer pænt på små/større skærme */
+  bottom: 170.2px; /* placeret nede */
+  left: 1060px; /* placeret i venstre hjørne */
+  transform: none; /* fjern tidligere translate */
+  z-index: 1; /* sørg for den ligger over baggrunden */
+}
+
+.koral img {
+  max-width: 1000%;
+  height: auto;
 }
 
 
