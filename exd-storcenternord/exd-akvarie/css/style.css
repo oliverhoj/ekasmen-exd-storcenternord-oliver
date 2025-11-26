@@ -211,10 +211,7 @@ body {
 }
 
 
-/* --- Justerede fisk-placeringer så alle er synlige og forskudt lodret.
-   Hver fisk får entydig animation-navn (ingen globale @keyframes conflicts).
-   Jeg ændrer kun position (left/right + bottom) og animation-navn/direction,
-   så de ikke ligger oveni hinanden. Varigheder er bevaret som i din fil. */
+
 
 /* Gul kirurgfisk (svømmer højre -> venstre) */
 .gul-kirurgfisk {
@@ -225,82 +222,131 @@ body {
   bottom: 8vh;           /* fordelt lodret */
   z-index: 3;
   animation: swim-gul 10s linear infinite;
+  animation-delay: 0s;     
 }
-.gul-kirurgfisk img { max-width: 600%; height: auto; transform: scaleX(-1); }
-@keyframes swim-gul { 0% { transform: translateX(0); } 100% { transform: translateX(-220vw); } }
+.gul-kirurgfisk img { 
+  max-width: 600%; 
+  height: auto; 
+  transform: scaleX(-1); 
+}
 
-/* Dværgkejserfisk (højre -> venstre) */
+@keyframes swim-gul {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(-220vw); }
+}
+
+/* Dværgkejserfisk — (svømmer fra højre mod venstre) */
 .dvaergkejserfisk {
   position: absolute;
-  width: 70px;
-  max-width: 20vw;
-  left: 100%;
+  width: auto;
+  max-width: 20vw;         
+  left: -120%;
   bottom: 18vh;
   z-index: 3;
-  animation: swim-dvaerg 20s linear infinite;
+  animation: swim-dvaerg-right 20s linear infinite;
+  animation-delay: -2s;    
 }
-.dvaergkejserfisk img { max-width: 600%; height: auto; transform: scaleX(-1); }
-@keyframes swim-dvaerg { 0% { transform: translateX(0); } 100% { transform: translateX(-220vw); } }
+
+.dvaergkejserfisk img {
+  display: block;
+  width: clamp(100px, 9vw, 220px); /* min 100px, skalerer med viewport, maks 220px */
+  max-height: 600%;
+  transform: scaleX(-1);  
+  max-width: none;        
+}
+
+@keyframes swim-dvaerg-right {
+  0%   { transform: translateX(0); }     
+  100% { transform: translateX(220vw); } 
+}
 
 /* Paletkirurgfisk (ændret: venstre -> højre) */
 .paletkirurgfisk {
   position: absolute;
   width: 70px;
   max-width: 20vw;
-  left: -120%;           /* starter ude til venstre */
-  bottom: 28vh;          /* behold eller justér lodret placering */
+  left: -120%;           
+  bottom: 28vh;          
   z-index: 3;
-  animation: swim-palet-right 20s linear infinite; /* nyt animation-navn */
+  animation: swim-palet-right 20s linear infinite; 
+  animation-delay: -5s;    
 }
-.paletkirurgfisk img { max-width: 600%; height: auto; transform: scaleX(1); }
+.paletkirurgfisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(-1); 
+}
 
 @keyframes swim-palet-right {
-  0%   { transform: translateX(0); }     /* starter ved left:-120% */
-  100% { transform: translateX(220vw); } /* bevæger sig langt til højre */
+  0%   { transform: translateX(0); }     
+  100% { transform: translateX(220vw); } 
 }
 
-/* Klovnfisk (VENSTRE -> HØJRE) */
+/* Klovnfisk (højre -> venstre) */
 .klovnfisk {
   position: absolute;
   width: 70px;
   max-width: 20vw;
-  left: -120%;           /* starter ude til venstre */
-  bottom: 38vh;
+  left: 100%;           
+  bottom: 38vh;         
   z-index: 3;
-  animation: swim-klovn-right 20s linear infinite;
+  animation: swim-klovn-left 20s linear infinite; 
 }
-.klovnfisk img { max-width: 600%; height: auto; transform: scaleX(1); }
-@keyframes swim-klovn-right { 0% { transform: translateX(0); } 100% { transform: translateX(220vw); } }
+.klovnfisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(1); 
+}
+
+@keyframes swim-klovn-left {
+  0%   { transform: translateX(0); }      
+  100% { transform: translateX(-220vw); } 
+}
 
 /* Pudsefisk (ændret: venstre -> højre) */
 .pudsefisk {
   position: absolute;
   width: 70px;
   max-width: 20vw;
-  left: -120%;           /* starter ude til venstre */
-  bottom: 48vh;          /* behold eller justér lodret placering */
+  left: -120%;           
+  bottom: 48vh;         
   z-index: 3;
-  animation: swim-pudse-right 20s linear infinite; /* nyt animation-navn */
+  animation: swim-pudse-right 20s linear infinite; 
+  animation-delay: -3s;
 }
-.pudsefisk img { max-width: 600%; height: auto; transform: scaleX(1); }
+.pudsefisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(1);
+}
 
 @keyframes swim-pudse-right {
   0%   { transform: translateX(0); }
   100% { transform: translateX(220vw); }
 }
 
-/* Hvidstrubet kirurgfisk (højre -> venstre) */
+/* Hvidstrubet kirurgfisk — (svømmer fra venstre mod højre) */
 .hvidstrubet-kirurgfisk {
   position: absolute;
   width: 70px;
   max-width: 20vw;
-  left: 100%;
-  bottom: 58vh;
+  left: -120%;           
+  bottom: 58vh;          
   z-index: 3;
-  animation: swim-hvid 20s linear infinite;
+  animation: swim-hvid-right 20s linear infinite; 
+  animation-delay: 4s;
 }
-.hvidstrubet-kirurgfisk img { max-width: 600%; height: auto; transform: scaleX(-1); }
-@keyframes swim-hvid { 0% { transform: translateX(0); } 100% { transform: translateX(-220vw); } }
+/* Behold billedets nuværende vending */
+.hvidstrubet-kirurgfisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(-1); 
+}
+
+@keyframes swim-hvid-right {
+  0%   { transform: translateX(0); }     
+  100% { transform: translateX(220vw); } 
+}
 
 /* Pincetfisk (højre -> venstre) */
 .pincetfisk {
@@ -311,9 +357,17 @@ body {
   bottom: 68vh;
   z-index: 3;
   animation: swim-pincet 20s linear infinite;
+  animation-delay: -6s;
 }
-.pincetfisk img { max-width: 600%; height: auto; transform: scaleX(-1); }
-@keyframes swim-pincet { 0% { transform: translateX(0); } 100% { transform: translateX(-220vw); } }
+.pincetfisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(-1);
+}
+@keyframes swim-pincet {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-220vw); }
+}
 
 /* Sortbåndet kirurgfisk (højre -> venstre) */
 .sortbaandet-kirurgfisk {
@@ -324,6 +378,14 @@ body {
   bottom: 78vh;
   z-index: 3;
   animation: swim-sort 20s linear infinite;
+  animation-delay: -2s;
 }
-.sortbaandet-kirurgfisk img { max-width: 600%; height: auto; transform: scaleX(-1); }
-@keyframes swim-sort { 0% { transform: translateX(0); } 100% { transform: translateX(-220vw); } }
+.sortbaandet-kirurgfisk img {
+  max-width: 600%;
+  height: auto;
+  transform: scaleX(-1);
+}
+@keyframes swim-sort {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-220vw); }
+}
