@@ -249,7 +249,7 @@ body {
 
 .dvaergkejserfisk img {
   display: block;
-  width: clamp(100px, 9vw, 220px); /* min 100px, skalerer med viewport, maks 220px */
+  width: 240px;
   max-height: 600%;
   transform: scaleX(-1);  
   max-width: none;        
