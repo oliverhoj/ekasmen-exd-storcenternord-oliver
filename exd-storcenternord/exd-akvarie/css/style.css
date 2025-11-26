@@ -59,7 +59,7 @@ body {
 }
 
 .image-button img {
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
 }
 
@@ -169,8 +169,8 @@ body {
 
 .pirat {
   position: absolute;
-  bottom: 138px;
-  left: 245px;
+  bottom: 148px;
+  left: 289px;
   transform: none;
   position: absolute;
   transform: none;
@@ -191,11 +191,27 @@ body {
   left: 1060px; /* placeret i venstre hjørne */
   transform: none; /* fjern tidligere translate */
   z-index: 1; /* sørg for den ligger over baggrunden */
+  /* valgfri styring via CSS-variabler */
+  --koral-sway-angle: 3deg;
+  --koral-sway-x: 6px;
+  --koral-sway-duration: 3s;
+  --koral-sway-ease: ease-in-out;
 }
 
 .koral img {
-  max-width: 1000%;
+  display: block;
   height: auto;
+  max-width: 1000%;              /* undgå at andre regler klemmer billedet */
+  transform-origin: 50% 95%;    /* roter fra bunden af korallen */
+  will-change: transform;
+  animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
+}
+
+/* blød keyframe: kombiner rotation og lidt horisontal bevægelse */
+@keyframes coral-sway {
+  0%   { transform: rotate(calc(-1 * var(--koral-sway-angle))) translateX(calc(-0.5 * var(--koral-sway-x))); }
+  50%  { transform: rotate(calc(var(--koral-sway-angle) * 0.6))  translateX(calc(0.6 * var(--koral-sway-x))); }
+  100% { transform: rotate(var(--koral-sway-angle)) translateX(var(--koral-sway-x)); }
 }
 
 
