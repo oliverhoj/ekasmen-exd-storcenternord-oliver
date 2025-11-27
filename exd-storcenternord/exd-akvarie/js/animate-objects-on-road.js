@@ -27,11 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   skattekiste.addEventListener("click", handleSkattekisteClick);
 });
 
-function playBtnClick(event) {
-  const playBtnSound = new Audio("exd-akvarie/sound/eating-chips.mp3");
-  playBtnSound.play();
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const playBtn = document.getElementById("play-button");
   playBtn.addEventListener("click", playBtnClick);
@@ -43,7 +38,7 @@ document.getElementById("play-button").addEventListener("click", function () {
 });
 
 function piratClick(event) {
-  const piratSound = new Audio("exd-akvarie/sound/wooden-ship-break.mp3");
+  const piratSound = new Audio("exd-akvarie/sound/pirat-sound.mp3");
   piratSound.play();
 }
 
