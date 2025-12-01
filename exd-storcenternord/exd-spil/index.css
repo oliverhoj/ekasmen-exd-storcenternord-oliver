@@ -1,34 +1,50 @@
-/* Tilføj øverst */
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fyld hele skærmen med spillet og ingen scroll */
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Forhindrer scrolling */
-  box-sizing: border-box;
+  overflow: hidden;
 }
 
-#dodger {
-  /* background-color: white;
-  height: 20px;
-  position: absolute;
-  width: 40px; */
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-
+/* SPIL-SCENEN */
 #game {
-  background-image: url(img/background.svg);
-  /* fylder hele viewport uden scroll og uden hvide kanter */
-  width: 100%;
-  height: 100%;
+  position: relative;              /* så #dodger kan stå absolut inde i */
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/background.svg");
+  background-size: cover;          /* dækker hele baggrunden */
+  background-position: center;     /* centrer baggrunden */
   overflow: hidden;
   text-align: center;
-  background-size: cover; /* dækker hele baggrunden */
-  background-position: center; /* centrer baggrunden */
 }
 
+/* DODGER-CONTAINER (spilleren) */
+#dodger {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  /* startposition – midt horisontalt, lidt oppe fra bunden */
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+/* selve billedet inde i dodger */
+#dodger-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scaleX(-1);   /* <-- vender fisken om */
+}
+
+/* START-TEKST (hvis du bruger den) */
 #start {
   color: white;
   font-size: 4rem;
@@ -37,6 +53,7 @@ body {
   top: 4rem;
 }
 
+/* ROKKE (forhindringer) */
 .rock {
   width: 20px;
   height: 20px;
@@ -68,6 +85,7 @@ body {
   width: 9px;
 }
 
+/* TILBAGE-KNAP */
 #tilbage {
   position: absolute;
   top: 10px;
@@ -79,4 +97,9 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 10;              /* så den ligger ovenpå spillet */
+}
+
+#tilbage:hover {
+  background-color: #b5162a;
 }

@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Fish-man</title>
+    <title>Fiske spillet</title>
+
+    <!-- Favicons -->
     <link
       rel="shortcut icon"
-      href="../exd-spil/img/vector_fish.svg"
+      href="../exd-spil/img/klovnfisk.svg"
       type="image/x-icon"
     />
     <link
@@ -15,23 +17,39 @@
       href="../exd-akvarie/img/nemofish.png"
       type="image/x-icon"
     />
+
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
+
   <body>
-    <button id="tilbage">Tilbage</button>
+    <!-- TILBAGE-KNAP -->
+    <button id="tilbage" type="button" onclick="window.location.href='../exd-akvarie/index.html'">
+      Tilbage
+    </button>
+
+    <!-- SPIL-SCENE -->
     <div id="game">
+      <!-- DODGER (spilleren) -->
       <div id="dodger">
-        <img id="dodger" src="../exd-spil/img/vector_fish.svg" alt="dodger" />
+        <img
+          id="dodger-img"
+          src="../exd-spil/img/klovnfisk.svg"
+          alt="dodger"
+        />
       </div>
     </div>
+
+    <!-- LYDE -->
     <audio id="movementSound">
       <source src="../exd-spil/audio/movement_sound.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
+
     <audio id="gameoverSound">
       <source src="../exd-spil/audio/gameover_sound.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
+
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
