@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.classList.add("is-visible"); // Gør tooltip'en synlig med css klassen
       setTimeout(function () {
         tooltip.classList.remove("is-visible"); // Fjerner synligheds-klassen efter 8 sekunder
-      }, 8000);
+      }, 10000);
     }
   }
 
