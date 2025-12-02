@@ -1,91 +1,116 @@
-/* GLOBAL RESET */
+/* ------------------------------------------------------------
+   GLOBAL RESET
+------------------------------------------------------------ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Fyld hele skærmen med spillet og ingen scroll */
+/* ------------------------------------------------------------
+   HTML + BODY
+------------------------------------------------------------ */
 html,
 body {
   height: 100%;
   overflow: hidden;
 }
 
-/* SPIL-SCENEN */
+/* ------------------------------------------------------------
+   SPIL-SCENE (#game)
+------------------------------------------------------------ */
 #game {
-  position: relative;              /* så #dodger kan stå absolut inde i */
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url("img/background.svg");
-  background-size: cover;          /* dækker hele baggrunden */
-  background-position: center;     /* centrer baggrunden */
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
-  text-align: center;
 }
 
-/* DODGER-CONTAINER (spilleren) */
+/* ------------------------------------------------------------
+   SCORE VISNING
+------------------------------------------------------------ */
+#score {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  z-index: 15;
+}
+
+/* ------------------------------------------------------------
+   DODGER (fisken)
+------------------------------------------------------------ */
 #dodger {
   position: absolute;
-  width: 100px;
-  height: 100px;
-
-  /* startposition – midt horisontalt, lidt oppe fra bunden */
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
 }
 
-/* selve billedet inde i dodger */
+/* Selve billedet af fisken */
 #dodger-img {
   width: 100%;
   height: 100%;
   display: block;
-  transform: scaleX(-1);   /* <-- vender fisken om */
+  transform: scaleX(-1); /* Kigger mod venstre fra start */
 }
 
-/* START-TEKST (hvis du bruger den) */
-#start {
-  color: white;
-  font-size: 4rem;
-  position: relative;
-  text-decoration: none;
-  top: 4rem;
-}
-
-/* ROKKE (forhindringer) */
-.rock {
-  width: 20px;
-  height: 20px;
-  background: tan;
+/* ------------------------------------------------------------
+   ORM-POINT (den man samler)
+------------------------------------------------------------ */
+#orm-point {
   position: absolute;
+  width: 80px;
+  height: 50px;
+  z-index: 5;
+  animation: orm-bob 2s ease-in-out infinite;
 }
 
-.rock:before {
-  content: "";
-  border-bottom: 6px solid tan;
-  border-left: 6px solid #111;
-  border-right: 6px solid #111;
-  height: 0;
-  left: 0;
+#orm-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Lidt flyde-animation */
+@keyframes orm-bob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------------------
+   HAJ (fjenden)
+------------------------------------------------------------ */
+#haj {
   position: absolute;
-  top: 0;
-  width: 9px;
+  width: 160px;
+  height: 80px;
+  z-index: 7;
+  pointer-events: none; /* man kan ikke klikke på den */
 }
 
-.rock:after {
-  content: "";
-  border-left: 6px solid #111;
-  border-right: 6px solid #111;
-  border-top: 6px solid tan;
-  bottom: 0;
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 9px;
+#haj-img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-/* TILBAGE-KNAP */
+
+/* ------------------------------------------------------------
+   TILBAGE-KNAP
+------------------------------------------------------------ */
 #tilbage {
   position: absolute;
   top: 10px;
@@ -97,7 +122,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 10;              /* så den ligger ovenpå spillet */
+  z-index: 60;
 }
 
 #tilbage:hover {

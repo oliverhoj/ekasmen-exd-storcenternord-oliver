@@ -23,12 +23,19 @@
 
   <body>
     <!-- TILBAGE-KNAP -->
-    <button id="tilbage" type="button" onclick="window.location.href='../exd-akvarie/index.html'">
+    <button
+      id="tilbage"
+      type="button"
+      onclick="window.location.href='../exd-akvarie/index.html'"
+    >
       Tilbage
     </button>
 
     <!-- SPIL-SCENE -->
     <div id="game">
+      <!-- SCORE VISNING -->
+      <div id="score">Point: 0</div>
+
       <!-- DODGER (spilleren) -->
       <div id="dodger">
         <img
@@ -36,6 +43,26 @@
           src="../exd-spil/img/klovnfisk.svg"
           alt="dodger"
         />
+      </div>
+
+      <!-- ORM-POINT (det du samler for at få point) -->
+      <div id="orm-point">
+        <img id="orm-img" src="../exd-spil/img/orm-point.png" alt="orm" />
+      </div>
+
+      <!-- HAJ (fjenden) -->
+      <div id="haj">
+        <img id="haj" src="../exd-spil/img/haj.png" alt="haj" />
+        <!-- ret evt. stien, hvis din haj-fil hedder noget andet -->
+      </div>
+
+      <!-- GAME OVER OVERLAY -->
+      <div id="game-over">
+        <div class="game-over-content">
+          <h1>GAME OVER</h1>
+          <p>Hajen fangede dig!</p>
+          <button id="restart">Spil igen</button>
+        </div>
       </div>
     </div>
 
@@ -50,6 +77,6 @@
       Your browser does not support the audio element.
     </audio>
 
-    <script type="text/javascript" src="index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

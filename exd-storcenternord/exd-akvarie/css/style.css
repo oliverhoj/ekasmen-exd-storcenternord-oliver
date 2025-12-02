@@ -317,7 +317,7 @@ body {
 /* Bestemmer placering af pop-up */
 .facts {
   position: fixed;/* Boksen sidder fast i skærmens hjørne, uanset hvad der bevæger sig på siden */
-  right: 550px;  /* Placering 550px fra højre og 16px fra bunden */
+  right: 500px;  /* Placering 550px fra højre og 16px fra bunden */
   bottom: 16px; /* Placering 550px fra højre og 16px fra bunden */
   background-color: rgba(29, 196, 238, 0.82);/* Sort baggrund med let gennemsigtighed */
   color: #000000;/* Hvid tekst */
