@@ -2,6 +2,7 @@
    Import af font
 --------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Honk&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* ---------------------------------------------------------
    Root-variabler
@@ -313,32 +314,90 @@ body {
 
 
 
-/* FISKE-INFO POP-UP  */
-/* Bestemmer placering af pop-up */
+/* Fakta-boblen (tooltip), som popper op når man klikker på en fisk */
 .facts {
-  position: fixed;/* Boksen sidder fast i skærmens hjørne, uanset hvad der bevæger sig på siden */
-  right: 500px;  /* Placering 550px fra højre og 16px fra bunden */
-  bottom: 16px; /* Placering 550px fra højre og 16px fra bunden */
-  background-color: rgba(29, 196, 238, 0.82);/* Sort baggrund med let gennemsigtighed */
-  color: #000000;/* Hvid tekst */
-  padding: 10px 12px;  /* Luft omkring teksten inde i boksen */
-  border-radius: 8px;  /* Blødt afrundede hjørner */
-  font-size: 20px;
-  line-height: 1.35;  /* God læsbarhed for teksten */
-  max-width: min(400px, 1000vw);  /* Boksen er max 320px bred – men på små skærme max 90% af skærmens bredde */
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);  /* Blød skygge under boksen */
-  opacity: 0;  /* Boksen starter usynlig */
-  transform: translateY(8px);   /* Boksen starter 8px længere nede, så den kan glide op når den vises */
-  transition: opacity 0.50s ease, transform 0.25s ease;  /* Gør at boksen blødt fader ind og glider op */
-  pointer-events: none;   /* Boksen må ikke kunne klikkes på – klik skal gå igennem til fiskene */
-  z-index: 1000;  /* Boksen ligger ovenpå alt andet */
+  position: fixed;
+
+  /* Boblen starter langt nede under skærmen (så den kan glide op som en rigtig boble) og den skal komme op midt på skærmen */
+  right: 600px;
+  bottom: -200px;
+
+  /* Gør boksen helt rund som en boble */
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+
+  /* Boble-look: glas + gennemsigtighed + glød */
+  background: rgba(255, 255, 255, 0.25);  /* vand-agtig gennemsigtighed */
+  backdrop-filter: blur(8px);             /* frostet glas effekt */
+  -webkit-backdrop-filter: blur(8px);
+  border: 3px solid rgba(255, 255, 255, 0.4); /* boble-kant */
+
+  /* Glans- og glødeeffekter for at ligne en ægte boble */
+  box-shadow:inset 0 0 20px rgba(255, 255, 255, 0.5), /* indvendig highlight */
+  0 0 30px rgba(0, 170, 255, 0.4),         /* blå ydre glød */
+  0 0 60px rgba(0, 170, 255, 0.3);
+
+  /* --- Børnevenlig tekst --- */
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;                        /* venlig, mørk turkis */
+  font-size: 18px;                       /* større = nemt for børn */
+  line-height: 1.4;                      /* god læsbarhed */
+  letter-spacing: 0.5px;                 /* lille afstand → klar tekst */
+  
+
+  /* Centrer teksten i boblen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Start usynlig og lille */
+  opacity: 0;
+  transform: scale(0.6);  /* pop-effekt forberedt */
+
+  /* Man kan ikke klikke boblen */
+  pointer-events: none;
+
+  z-index: 1000;
+
+  /* Glid-op + fade-in + pop-effekt når .is-visible tilføjes */
+  transition:
+    opacity 0.8s ease-out,                                /* fade ind */
+    transform 0.8s cubic-bezier(.15,.87,.41,1.46),        /* pop animation */
+    bottom 0.8s ease-out;                                /* glid op */
 }
 
-/* Når boksen skal være synlig */
+/* Når boblen bliver synlig */
 .facts.is-visible {
-  opacity: 1;  /* Gør boksen synlig */
-  transform: translateY(0);  /* Flytter boksen op til sin normale position, så det ligner den glider ind */
+  opacity: 1;         /* Fade ind */
+  bottom: 20px;       /* Boblen glider op til denne position */
+  transform: scale(1); /* Popper op til normal størrelse */
 }
+
+/*  INDHOLD I BOBLEN */
+.fish-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+}
+
+.fish-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.fish-info p {
+  margin: 3px 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
 
 
 
