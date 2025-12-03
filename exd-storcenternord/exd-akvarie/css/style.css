@@ -43,31 +43,58 @@ body {
 
 
 /* SPILKNAP */
+/* SPILKNAP MED PULSE-EFFEKT */
 .image-button {
   position: absolute;
-  width: 130px;             /* fast størrelse */
-  height: 130px;            /* gør den 1:1 rund */
-  left: 90vw;               /* placering kan stadig være i vw/vh */
+  width: 130px;
+  height: 130px;
+  left: 90vw;
   bottom: 20vh;
-  border-radius: 50%;       /* runder knappen */
-  overflow: hidden;         /* billedet bliver inde i cirklen */
+  border-radius: 50%;
+  overflow: hidden;
   cursor: pointer;
   z-index: 100;
+
+  /* Pulse-animation */
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 
 /* Selve billedet */
 .image-button img {
   width: 100%;
   height: 100%;
-  object-fit: fill;      /* billedet fylder hele knappen */
-  border-radius: 50%;        /* billedet følger den runde form */
+  object-fit: fill;
+  border-radius: 50%;
 }
 
-/* Hover (større glow + zoom) */
+/* Hover (bliver lidt større og kraftigere lys) */
 .image-button:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 40px rgba(227, 126, 11, 0.816),
-              0 0 80px rgba(241, 108, 7, 0.4);
+  box-shadow: 
+    0 0 50px rgba(203, 57, 239, 0.9),
+    0 0 90px rgba(220, 57, 239, 0.9);
+}
+
+/* Pulse-animation (lyser op og ned) */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 25px rgba(255, 150, 50, 0.4),
+      0 0 55px rgba(255, 100, 10, 0.2);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 
+    0 0 50px rgba(203, 57, 239, 0.9),
+    0 0 90px rgba(220, 57, 239, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 25px rgba(255, 150, 50, 0.4),
+      0 0 55px rgba(255, 100, 10, 0.2);
+  }
 }
 
 
@@ -598,3 +625,25 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-220vw); }
 }
+
+
+/* KLIK VECTOR – følger pincetfisken */
+.vector-klik {
+  position: absolute;
+  width: 70px;          /* samme bredde som fisken */
+  max-width: 12vw;
+  left: 107%;           /* lidt længere til højre = bagved fisken */
+  bottom: 70vh;         /* samme højde som fisken */
+  z-index: 4;           /* lavere end fisken, så den kommer bagved */
+  animation: swim-pincet 20s linear infinite;
+  animation-delay: -6s; /* samme som pincetfisken */
+
+}
+
+.vector-klik img {
+  width: 100%;
+  height: auto;
+  transform: scaleX(1);   /* SPEJLVENDER BILLEDET */
+}
+
+
