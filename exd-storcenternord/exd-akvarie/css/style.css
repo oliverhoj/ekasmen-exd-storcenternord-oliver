@@ -46,8 +46,8 @@ body {
   position: absolute;
   width: 130px;             /* fast størrelse */
   height: 130px;            /* gør den 1:1 rund */
-  left: 85vw;               /* placering kan stadig være i vw/vh */
-  bottom: 80vh;
+  left: 90vw;               /* placering kan stadig være i vw/vh */
+  bottom: 20vh;
   border-radius: 50%;       /* runder knappen */
   overflow: hidden;         /* billedet bliver inde i cirklen */
   cursor: pointer;
@@ -58,7 +58,7 @@ body {
 .image-button img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;      /* billedet fylder hele knappen */
   border-radius: 50%;        /* billedet følger den runde form */
 }
 

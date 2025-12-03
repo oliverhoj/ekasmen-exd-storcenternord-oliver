@@ -6,7 +6,7 @@ function handleBubbleClick(event) {
   bubbleSound.play();
 }
 
-// lav den nu med skattekisten, når man klikker på den så skal der afspilles en lyd af skattekisten der åbnes, med skattekiste-sounden
+//  Skattekiste sounden
 function handleSkattekisteClick(event) {
   const skattekisteSound = new Audio("exd-akvarie/sound/skattekiste-sound.mp3");
   skattekisteSound.play();
