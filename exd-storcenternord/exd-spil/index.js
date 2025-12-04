@@ -11,7 +11,6 @@ const scoreElement = document.getElementById("score");     // Score-tekst på sk
 const moveSound = document.getElementById("movementSound");      // Lyd når fisken bevæger sig
 const gameoverSound = document.getElementById("gameoverSound");  // Lyd når fisken rammer en kant
 
-
 /*    KONSTANTER (Størrelser og værdier) */
 
 const dodgerWidth = 100;   // Fiskens bredde i pixels (samme som CSS)
@@ -20,13 +19,11 @@ const ormSize = 50;        // Ormens størrelse
 
 let score = 0;             // Startscore = 0
 
-
 /* STARTPOSITION FOR FISKEN
    - Gør at fisken starter cirka i midten */
 
 dodger.style.left = "625px";
 dodger.style.bottom = "400px";
-
 
 /* LYTTER EFTER TASTATUR-KLIKKET
    - Når man trykker på piletasterne sker der noget */
@@ -37,7 +34,6 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowUp")    moveDodgerUp();     // Op pil
   if (e.key === "ArrowDown")  moveDodgerDown();   // Ned pil
 });
-
 
 /*    FUNKTIONER TIL AT BEVÆGE FISKEN */
 
@@ -59,7 +55,6 @@ function moveDodgerLeft() {
   }
 }
 
-
 /*  HØJRE  */
 function moveDodgerRight() {
 
@@ -76,7 +71,6 @@ function moveDodgerRight() {
     playSoundOnGameOver();
   }
 }
-
 
 /*  OP  */
 function moveDodgerUp() {
@@ -95,7 +89,6 @@ function moveDodgerUp() {
   }
 }
 
-
 /*  NED  */
 function moveDodgerDown() {
 
@@ -112,7 +105,6 @@ function moveDodgerDown() {
   }
 }
 
-
 /* LYDE */
 
 // Afspiller bevægelseslyd
@@ -126,7 +118,6 @@ function playSoundOnGameOver() {
   gameoverSound.currentTime = 0;
   gameoverSound.play();
 }
-
 
 /* ORMPLACERING (tilfældige positioner) */
 
@@ -144,7 +135,6 @@ function placeOrmRandomly() {
   ormPoint.style.left = `${randomX}px`;
   ormPoint.style.bottom = `${randomY}px`;
 }
-
 
 /* TJEK OM FISKEN RAMMER ORMEN  */
 function checkOrmCollision() {
@@ -168,16 +158,14 @@ function checkOrmCollision() {
   }
 }
 
+/* TILBAGE-KNAP FUNKTION */
+document.getElementById("tilbage").addEventListener("click", function () {
+  window.location.href = "../index-akvarie.html"; // Gå tilbage til akvariet
+});
+
 
 /* NÅR SPILLET STARTER */
 window.addEventListener("load", () => {
   placeOrmRandomly(); // Ormen dukker op et tilfældigt sted
 });
 
-
-
-
-/* TILBAGE-KNAP FUNKTION */
-document.getElementById("tilbage").addEventListener("click", function () {
-  window.location.href = "../index-akvarie.html"; // Gå tilbage til akvariet
-});

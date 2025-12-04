@@ -20,7 +20,6 @@ function piratClick(event) {
 
 /* Når siden er klar */
 document.addEventListener("DOMContentLoaded", () => {
-
   /* Klik på bobler */
   document.querySelectorAll(".bubble").forEach((bubble) => {
     bubble.addEventListener("click", handleBubbleClick);
@@ -63,63 +62,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Fiskeinfo – alle oplysninger på dansk */
   const fiskeInfo = [
-  {
-    FiskeNavn: "Gul kirurgfisk",
-    FiskeFarve: "Gul",
-    FiskeLevested: "Stillehavet",
-    FiskeLaengde: "20 cm",
-    FiskeSpiser: "Alger",
-  },
-  {
-    FiskeNavn: "Dværgkejserfisk",
-    FiskeFarve: "Orange/sort",
-    FiskeLevested: "Australien & Indonesien",
-    FiskeLaengde: "19 cm",
-    FiskeSpiser: "Alger",
-  },
-  {
-    FiskeNavn: "Paletkirurgfisk",
-    FiskeFarve: "Blå/sort/gul",
-    FiskeLevested: "Stillehavet",
-    FiskeLaengde: "31 cm",
-    FiskeSpiser: "Alger",
-  },
-  {
-    FiskeNavn: "Klovnefisk",
-    FiskeFarve: "Orange/hvid",
-    FiskeLevested: "Indiske Ocean",
-    FiskeLaengde: "8 cm",
-    FiskeSpiser: "Mikroalger",
-  },
-  {
-    FiskeNavn: "Pudsefisk",
-    FiskeFarve: "Blå/hvid/sort",
-    FiskeLevested: "Indiske Ocean",
-    FiskeLaengde: "11 cm",
-    FiskeSpiser: "Parasitter",
-  },
-  {
-    FiskeNavn: "Hvidstrubet kirugfisk",
-    FiskeFarve: "Blå/gul/hvid",
-    FiskeLevested: "Indonesien",
-    FiskeLaengde: "30 cm",
-    FiskeSpiser: "Alger",
-  },
-  {
-    FiskeNavn: "Pincetfisk",
-    FiskeFarve: "Hvid/gul/orange",
-    FiskeLevested: "Indiske Ocean",
-    FiskeLaengde: "20 cm",
-    FiskeSpiser: "Små dyr",
-  },
-  {
-    FiskeNavn: "Sortbåndet kirugfisk",
-    FiskeFarve: "Hvid/sort",
-    FiskeLevested: "Indiske Ocean",
-    FiskeLaengde: "11 cm",
-    FiskeSpiser: "Alger",
-  },
-];
+    {
+      FiskeNavn: "Gul kirurgfisk",
+      FiskeFarve: "Gul",
+      FiskeLevested: "Stillehavet",
+      FiskeLaengde: "20 cm",
+      FiskeSpiser: "Alger",
+    },
+    {
+      FiskeNavn: "Dværgkejserfisk",
+      FiskeFarve: "Orange/sort",
+      FiskeLevested: "Australien & Indonesien",
+      FiskeLaengde: "19 cm",
+      FiskeSpiser: "Alger",
+    },
+    {
+      FiskeNavn: "Paletkirurgfisk",
+      FiskeFarve: "Blå/sort/gul",
+      FiskeLevested: "Stillehavet",
+      FiskeLaengde: "31 cm",
+      FiskeSpiser: "Alger",
+    },
+    {
+      FiskeNavn: "Klovnefisk",
+      FiskeFarve: "Orange/hvid",
+      FiskeLevested: "Indiske Ocean",
+      FiskeLaengde: "8 cm",
+      FiskeSpiser: "Mikroalger",
+    },
+    {
+      FiskeNavn: "Pudsefisk",
+      FiskeFarve: "Blå/hvid/sort",
+      FiskeLevested: "Indiske Ocean",
+      FiskeLaengde: "11 cm",
+      FiskeSpiser: "Parasitter",
+    },
+    {
+      FiskeNavn: "Hvidstrubet kirugfisk",
+      FiskeFarve: "Blå/gul/hvid",
+      FiskeLevested: "Indonesien",
+      FiskeLaengde: "30 cm",
+      FiskeSpiser: "Alger",
+    },
+    {
+      FiskeNavn: "Pincetfisk",
+      FiskeFarve: "Hvid/gul/orange",
+      FiskeLevested: "Indiske Ocean",
+      FiskeLaengde: "20 cm",
+      FiskeSpiser: "Små dyr",
+    },
+    {
+      FiskeNavn: "Sortbåndet kirugfisk",
+      FiskeFarve: "Hvid/sort",
+      FiskeLevested: "Indiske Ocean",
+      FiskeLaengde: "11 cm",
+      FiskeSpiser: "Alger",
+    },
+  ];
 
   /* Sammenkobling mellem navne og HTML-id'er */
   const classMap = {
@@ -142,16 +141,15 @@ document.addEventListener("DOMContentLoaded", () => {
       elem.addEventListener("click", () => {
         const tekst = `
           <div class="fish-info">
-    <h2 class="fish-title">${fisk.FiskeNavn}</h2>
-    <p><strong>Farve:</strong> ${fisk.FiskeFarve}</p>
-    <p><strong>Levested:</strong> ${fisk.FiskeLevested}</p>
-    <p><strong>Længde:</strong> ${fisk.FiskeLaengde}</p>
-    <p><strong>Spiser:</strong> ${fisk.FiskeSpiser}</p>
-  </div>
+            <h2 class="fish-title">${fisk.FiskeNavn}</h2>
+            <p><strong>Farve:</strong> ${fisk.FiskeFarve}</p>
+            <p><strong>Levested:</strong> ${fisk.FiskeLevested}</p>
+            <p><strong>Længde:</strong> ${fisk.FiskeLaengde}</p>
+            <p><strong>Spiser:</strong> ${fisk.FiskeSpiser}</p>
+          </div>
         `;
         showTooltip(tekst);
       });
     });
   });
-
 });

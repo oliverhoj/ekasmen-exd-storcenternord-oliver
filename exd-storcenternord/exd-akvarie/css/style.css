@@ -39,9 +39,6 @@ body {
   background-position: center bottom;
 }
 
-
-
-
 /* SPILKNAP */
 /* SPILKNAP MED PULSE-EFFEKT */
 .image-button {
@@ -96,9 +93,6 @@ body {
       0 0 55px rgba(255, 100, 10, 0.2);
   }
 }
-
-
-
 
 /* BOBLERNE ANIMATION */
 .bubble {
@@ -184,9 +178,6 @@ body {
   --drift: 10px;
 }
 
-
-
-
 /* SKATTEKISTE VECTOR*/
 .image-skattekiste {
   position: absolute;
@@ -202,9 +193,6 @@ body {
   max-width: 1750%;
   height: auto;
 }
-
-
-
 
 /* PIRATSKIB VECTOR */
 .pirat {
@@ -222,10 +210,6 @@ body {
   max-width: 100vw;
   height: 70vh;
 }
-
-
-
-
 
 /* KORAL VECTOR*/ 
 .koral {
@@ -254,16 +238,11 @@ body {
 }
 
 /*  KORAL ANIMATION */
-/* blød keyframe: kombiner rotation og lidt horisontal bevægelse */
 @keyframes coral-sway {
   0%   { transform: rotate(calc(-1 * var(--koral-sway-angle))) translateX(calc(-0.5 * var(--koral-sway-x))); }
   50%  { transform: rotate(calc(var(--koral-sway-angle) * 0.6))  translateX(calc(0.6 * var(--koral-sway-x))); }
   100% { transform: rotate(var(--koral-sway-angle)) translateX(var(--koral-sway-x)); }
 }
-
-
-
-
 
 /* PINK KORAL VECTOR*/
 .pink-koral {
@@ -291,16 +270,6 @@ body {
   animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
 }
 
-/*  KORAL ANIMATION */
-/* blød keyframe: kombiner rotation og lidt horisontal bevægelse */
-@keyframes coral-sway {
-  0%   { transform: rotate(calc(-1 * var(--koral-sway-angle))) translateX(calc(-0.5 * var(--koral-sway-x))); }
-  50%  { transform: rotate(calc(var(--koral-sway-angle) * 0.6))  translateX(calc(0.6 * var(--koral-sway-x))); }
-  100% { transform: rotate(var(--koral-sway-angle)) translateX(var(--koral-sway-x)); }
-}
-
-
-
 /* LILLA KORAL VECTOR*/
 .lilla-koral {
   position: absolute;
@@ -326,20 +295,6 @@ body {
   will-change: transform;
   animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
 }
-
-/*  KORAL ANIMATION */
-/* blød keyframe: kombiner rotation og lidt horisontal bevægelse */
-@keyframes coral-sway {
-  0%   { transform: rotate(calc(-1 * var(--koral-sway-angle))) translateX(calc(-0.5 * var(--koral-sway-x))); }
-  50%  { transform: rotate(calc(var(--koral-sway-angle) * 0.6))  translateX(calc(0.6 * var(--koral-sway-x))); }
-  100% { transform: rotate(var(--koral-sway-angle)) translateX(var(--koral-sway-x)); }
-}
-
-
-
-
-
-
 
 /* Fakta-boblen (tooltip), som popper op når man klikker på en fisk */
 .facts {
@@ -396,7 +351,6 @@ body {
     bottom 0.8s ease-out;                                /* glid op */
 }
 
-/* Når boblen bliver synlig */
 .facts.is-visible {
   opacity: 1;         /* Fade ind */
   bottom: 20px;       /* Boblen glider op til denne position */
@@ -425,15 +379,7 @@ body {
   font-weight: 500;
 }
 
-
-
-
-
-
-
 /* FISKENE ANIMATIONER */
-
-
 
 /* Gul kirurgfisk (svømmer højre -> venstre) */
 .gul-kirurgfisk {
@@ -456,8 +402,6 @@ body {
    0% { transform: translateX(0); }
    100% { transform: translateX(-220vw); }
 }
-
-
 
 /* Dværgkejserfisk — (svømmer fra højre mod venstre) */
 .dvaergkejserfisk {
@@ -484,8 +428,6 @@ body {
   100% { transform: translateX(220vw); } 
 }
 
-
-
 /* Paletkirurgfisk (ændret: venstre -> højre) */
 .paletkirurgfisk {
   position: absolute;
@@ -508,8 +450,6 @@ body {
   100% { transform: translateX(220vw); } 
 }
 
-
-
 /* Klovnfisk (højre -> venstre) */
 .klovnfisk {
   position: absolute;
@@ -530,8 +470,6 @@ body {
   0%   { transform: translateX(0); }      
   100% { transform: translateX(-220vw); } 
 }
-
-
 
 /* Pudsefisk (ændret: venstre -> højre) */
 .pudsefisk {
@@ -554,8 +492,6 @@ body {
   0%   { transform: translateX(0); }
   100% { transform: translateX(220vw); }
 }
-
-
 
 /* Hvidstrubet kirurgfisk — (svømmer fra venstre mod højre) */
 .hvidstrubet-kirurgfisk {
@@ -580,8 +516,6 @@ body {
   100% { transform: translateX(220vw); } 
 }
 
-
-
 /* Pincetfisk (højre -> venstre) */
 .pincetfisk {
   position: absolute;
@@ -602,8 +536,6 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-220vw); }
 }
-
-
 
 /* Sortbåndet kirurgfisk (højre -> venstre) */
 .sortbaandet-kirurgfisk {
@@ -626,7 +558,6 @@ body {
   100% { transform: translateX(-220vw); }
 }
 
-
 /* KLIK VECTOR – følger pincetfisken */
 .vector-klik {
   position: absolute;
@@ -646,7 +577,6 @@ body {
   transform: scaleX(1);   /* SPEJLVENDER BILLEDET */
 }
 
-
 /* SØSTJERNE VECTOR */
 .sostjerne {
   position: absolute;
@@ -660,4 +590,3 @@ body {
   max-width: 200%;
   height: auto;
 } 
-
