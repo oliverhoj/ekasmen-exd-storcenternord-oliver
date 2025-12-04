@@ -647,3 +647,17 @@ body {
 }
 
 
+/* SØSTJERNE VECTOR */
+.sostjerne {
+  position: absolute;
+  width: 50px;
+  max-width: 8vw;
+  left: 550px;
+  bottom: 30px;
+  z-index: 2;
+}
+.sostjerne img {
+  max-width: 200%;
+  height: auto;
+} 
+
