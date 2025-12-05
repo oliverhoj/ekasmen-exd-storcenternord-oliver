@@ -123,12 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
   /* Sammenkobling mellem navne og HTML-id'er */
   const classMap = {
     "Gul kirurgfisk": "gul-kirurgfisk",
-    Dværgkejserfisk: "dvaergkejserfisk",
-    Paletkirurgfisk: "paletkirurgfisk",
-    Klovnefisk: "klovnfisk",
-    Pudsefisk: "pudsefisk",
+    "Dværgkejserfisk": "dvaergkejserfisk",
+    "Paletkirurgfisk": "paletkirurgfisk",
+    "Klovnefisk": "klovnfisk",
+    "Pudsefisk": "pudsefisk",
     "Hvidstrubet kirugfisk": "hvidstrubet-kirurgfisk",
-    Pincetfisk: "pincetfisk",
+    "Pincetfisk": "pincetfisk",
     "Sortbåndet kirugfisk": "sortbaandet-kirurgfisk",
   };
 

@@ -13,8 +13,8 @@ const gameoverSound = document.getElementById("gameoverSound");  // Lyd når fis
 
 /*    KONSTANTER (Størrelser og værdier) */
 
-const dodgerWidth = 100;   // Fiskens bredde i pixels (samme som CSS)
-const dodgerHeight = 100;  // Fiskens højde i pixels
+const dodgerWidth = 150;   // Fiskens bredde i pixels (samme som CSS)
+const dodgerHeight = 150;  // Fiskens højde i pixels
 const ormSize = 50;        // Ormens størrelse
 
 let score = 0;             // Startscore = 0
