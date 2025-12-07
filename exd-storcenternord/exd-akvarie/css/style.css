@@ -45,8 +45,8 @@ body {
   position: absolute;
   width: 130px;
   height: 130px;
-  left: 90vw;
-  bottom: 20vh;
+  left: 89vw;
+  bottom: 82vh;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -68,8 +68,8 @@ body {
 .image-button:hover {
   transform: scale(1.15);
   box-shadow: 
-    0 0 50px rgba(203, 57, 239, 0.9),
-    0 0 90px rgba(220, 57, 239, 0.9);
+    0 0 50px rgb(255, 136, 1),
+    0 0 90px rgb(255, 128, 0);
 }
 
 /* Pulse-animation (lyser op og ned) */
@@ -83,8 +83,8 @@ body {
   50% {
     transform: scale(1.06);
     box-shadow: 
-    0 0 50px rgba(203, 57, 239, 0.9),
-    0 0 90px rgba(220, 57, 239, 0.9);
+      0 0 50px rgb(255, 136, 1),
+    0 0 90px rgb(255, 128, 0);
   }
   100% {
     transform: scale(1);

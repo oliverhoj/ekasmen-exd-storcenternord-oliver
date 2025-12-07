@@ -23,10 +23,12 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url("img/background.svg");
+  background-image: url("../img/background.svg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
+  z-index: 1000;
 }
 
 /* ------------------------------------------------------------
@@ -36,10 +38,9 @@ body {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 24px;
+  font-size: 45px;
   font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  color: #f4c61e;
   z-index: 15;
 }
 

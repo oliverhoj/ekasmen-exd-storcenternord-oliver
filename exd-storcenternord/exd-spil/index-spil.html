@@ -1,67 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fiske spillet</title>
-
-    <!-- Favicons -->
-    <link
-      rel="shortcut icon"
-      href="../exd-spil/img/klovnfisk.svg"
-      type="image/x-icon"
-    />
-    <link
-      rel="shortcut icon"
-      href="../exd-akvarie/img/nemofish.png"
-      type="image/x-icon"
-    />
-
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="shortcut icon" href="img/klovnfisk.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
 
   <body>
-    <!-- TILBAGE-KNAP -->
-    <button
-      id="tilbage"
-      type="button"
-      onclick="window.location.href='../exd-akvarie/index-akvarie.html'"
-    >
-      Tilbage
-    </button>
-
-    <!-- SPIL-SCENE -->
+    <!-- én #game container (fjerner dublet) -->
     <div id="game">
-      <!-- SCORE VISNING -->
+      <!-- score visning -->
       <div id="score">Point: 0</div>
 
-      <!-- DODGER (spilleren) -->
+      <!-- fisk (dodger) -->
       <div id="dodger">
-        <img
-          id="dodger-img"
-          src="../exd-spil/img/klovnfisk.svg"
-          alt="dodger"
-        />
+        <img id="dodger-img" src="img/klovnfisk.svg" alt="dodger" />
       </div>
 
-      <!-- ORM-POINT (det du samler for at få point) -->
+      <!-- orm/point -->
       <div id="orm-point">
-        <img id="orm-img" src="../exd-spil/img/orm-point.png" alt="orm" />
+        <img id="orm-img" src="img/orm-point.png" alt="orm" />
       </div>
+
+      <!-- tilbage-knap -->
+      <button id="tilbage" onclick="window.location.href='../exd-akvarie/index-akvarie.html'">Tilbage</button>
     </div>
 
-    <!-- LYDE -->
+    <!-- LYD (hold relative stier i exd-spil mappen) -->
     <audio id="movementSound">
-      <source src="../exd-spil/audio/movement_sound.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
+      <source src="audio/movement_sound.mp3" type="audio/mp3" />
     </audio>
 
     <audio id="gameoverSound">
-      <source src="../exd-spil/audio/gameover_sound.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
+      <source src="audio/gameover_sound.mp3" type="audio/mp3" />
     </audio>
 
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
