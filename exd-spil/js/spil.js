@@ -152,7 +152,7 @@ function checkOrmCollision() {
 
 /* TILBAGE-KNAP FUNKTION */
 document.getElementById("tilbage").addEventListener("click", function () {
-  window.location.href = "../index-akvarie.html"; // Gå tilbage til akvariet
+  window.location.href = "../index.html"; // Gå tilbage til akvariet
 });
 
 
