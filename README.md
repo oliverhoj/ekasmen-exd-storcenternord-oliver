@@ -24,12 +24,7 @@ Dette projekt er en forbedret version af mit oprindelige ExD-akvarie udviklet p�
 
 ## Målgruppe
 Projektet er designet til børn i alderen 4–6 år, baseret på udviklingspsykologiske principper (Piaget) og UX-design for børn.
-
-## Links
-- **Live version:** *indsæt GitHub Pages link*  
-- **Repository:** *indsæt link*  
-- **Figma design:** *indsæt link*  
-- **Figma prototype:** *indsæt link*  
+  
 
 ---
 
