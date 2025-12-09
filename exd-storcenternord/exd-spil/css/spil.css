@@ -48,7 +48,7 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  transform: scaleX(-1); /* Kigger mod venstre fra start */
+  transform: scaleX(-1); 
 }
 
 /* ORM-POINT  */
