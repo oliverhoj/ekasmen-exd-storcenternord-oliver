@@ -1,21 +1,13 @@
-/* ---------------------------------------------------------
-   Import af font
---------------------------------------------------------- */
+/* IMPORT AF FONT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Honk&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ---------------------------------------------------------
-   Root-variabler
-   - px: billedstørrelser, offsets
-   - farver + font
---------------------------------------------------------- */
+/* ROOT-VARIABLER */
 :root {
   --font-body: "Poppins", sans-serif;
 }
 
-/* ---------------------------------------------------------
-   Global reset
---------------------------------------------------------- */
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +31,7 @@ body {
   background-position: center bottom;
 }
 
-/* SPILKNAP */
+
 /* SPILKNAP MED PULSE-EFFEKT */
 .image-button {
   position: absolute;
@@ -56,7 +48,7 @@ body {
   animation: pulseGlow 2s ease-in-out infinite;
 }
 
-/* Selve billedet */
+/* SELVE BILLEDEN */
 .image-button img {
   width: 100%;
   height: 100%;
@@ -64,13 +56,13 @@ body {
   border-radius: 50%;
 }
 
-/* Hover (bliver lidt større og kraftigere lys) */
+/* HOVER (bliver lidt større og kraftigere lys) */
 .image-button:hover {
   transform: scale(1.15);
   box-shadow: 0 0 50px rgb(255, 136, 1), 0 0 90px rgb(255, 128, 0);
 }
 
-/* Pulse-animation (lyser op og ned) */
+/* PULSE-ANIMATION (lyser op og ned) */
 @keyframes pulseGlow {
   0% {
     transform: scale(1);
@@ -158,10 +150,10 @@ body {
   --drift: 20px;
 }
 .bubble:nth-child(9) {
-  animation-delay: 0s; /* gør boblen synlig med det samme */
-  animation-duration: 18s; /* gør boblen langsommere */
-  left: 81%; /* gør boblen mere til højre */
-  --drift: 70px; /* gør boblen mere til højre mens den svømmer*/
+  animation-delay: 0s; 
+  animation-duration: 18s; 
+  left: 81%; 
+  --drift: 70px; 
 }
 .bubble:nth-child(10) {
   animation-delay: 0s;
@@ -173,12 +165,12 @@ body {
 /* SKATTEKISTE VECTOR*/
 .image-skattekiste {
   position: absolute;
-  width: 19px; /* gør kisten mindre */
-  max-width: 20vw; /* skalerer pænt på små/større skærme */
-  bottom: -5px; /* placeret nede */
-  left: 10px; /* placeret i venstre hjørne */
-  transform: none; /* fjern tidligere translate */
-  z-index: 1; /* sørg for den ligger over baggrunden */
+  width: 19px; 
+  max-width: 20vw; 
+  bottom: -5px; 
+  left: 10px; 
+  transform: none; 
+  z-index: 1; 
 }
 
 .image-skattekiste img {
@@ -198,7 +190,6 @@ body {
 }
 
 .pirat img {
-  max-height: auto;
   max-width: 100vw;
   height: 70vh;
 }
@@ -206,13 +197,13 @@ body {
 /* KORAL VECTOR*/ 
 .koral {
   position: absolute;
-  width: 20px; /* gør kisten mindre */
-  max-width: 20vw; /* skalerer pænt på små/større skærme */
-  bottom: 180px; /* placeret nede */
-  left: 1060px; /* placeret i venstre hjørne */
-  transform: none; /* fjern tidligere translate */
-  z-index: 1; /* sørg for den ligger over baggrunden */
-  /* valgfri styring via CSS-variabler */
+  width: 20px; 
+  max-width: 20vw; 
+  bottom: 180px; 
+  left: 1060px; 
+  transform: none; 
+  z-index: 1; 
+  
   --koral-sway-angle: 2deg;
   --koral-sway-x: 6px;
   --koral-sway-duration: 5s;
@@ -223,8 +214,8 @@ body {
 .koral img {
   display: block;
   height: auto;
-  max-width: 1000%;              /* undgå at andre regler klemmer billedet */
-  transform-origin: 50% 95%;    /* roter fra bunden af korallen */
+  max-width: 1000%; 
+  transform-origin: 50% 95%;   
   will-change: transform;
   animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
 }
@@ -239,13 +230,13 @@ body {
 /* PINK KORAL VECTOR*/
 .pink-koral {
   position: absolute;
-  width: 20px; /* gør kisten mindre */
-  max-width: 20vw; /* skalerer pænt på små/større skærme */
-  bottom: 115px; /* placeret nede */
-  left: 790px; /* placeret i venstre hjørne */
-  transform: none; /* fjern tidligere translate */
-  z-index: 1; /* sørg for den ligger over baggrunden */
-  /* valgfri styring via CSS-variabler */
+  width: 20px; 
+  max-width: 20vw; 
+  bottom: 115px; 
+  left: 790px; 
+  transform: none; 
+  z-index: 1; 
+  
   --koral-sway-angle: 3deg;
   --koral-sway-x: 6px;
   --koral-sway-duration: 3s;
@@ -256,8 +247,8 @@ body {
 .pink-koral img {
   display: block;
   height: auto;
-  max-width: 500%;              /* undgå at andre regler klemmer billedet */
-  transform-origin: 50% 95%;    /* roter fra bunden af korallen */
+  max-width: 500%;              
+  transform-origin: 50% 95%;    
   will-change: transform;
   animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
 }
@@ -265,13 +256,13 @@ body {
 /* LILLA KORAL VECTOR*/
 .lilla-koral {
   position: absolute;
-  width: 20px; /* gør kisten mindre */
-  max-width: 20vw; /* skalerer pænt på små/større skærme */
-  bottom: 215px; /* placeret nede */
-  left: 240px; /* placeret i venstre hjørne */
-  transform: rotate(22deg); /* fjern tidligere translate */
-  z-index: 1; /* sørg for den ligger over baggrunden */
-  /* valgfri styring via CSS-variabler */
+  width: 20px; 
+  max-width: 20vw; 
+  bottom: 215px; 
+  left: 240px; 
+  transform: rotate(22deg); 
+  z-index: 1; 
+  
   --koral-sway-angle: 3deg;
   --koral-sway-x: 6px;
   --koral-sway-duration: 5s;
@@ -282,43 +273,39 @@ body {
 .lilla-koral img {
   display: block;
   height: auto;
-  max-width: 500%;              /* undgå at andre regler klemmer billedet */
-  transform-origin: 50% 95%;    /* roter fra bunden af korallen */
+  max-width: 500%;              
+  transform-origin: 50% 95%;    
   will-change: transform;
   animation: coral-sway var(--koral-sway-duration) var(--koral-sway-ease) infinite alternate;
 }
 
-/* Fakta-boblen (tooltip), som popper op når man klikker på en fisk */
+/* FAKTA-BOBLEN (tooltip), som popper op når man klikker på en fisk */
 .facts {
   position: fixed;
-
-  /* Boblen starter langt nede under skærmen (så den kan glide op som en rigtig boble) og den skal komme op midt på skærmen */
   right: 600px;
   bottom: -200px;
-
-  /* Gør boksen helt rund som en boble */
   width: 280px;
   height: 280px;
   border-radius: 50%;
 
   /* Boble-look: glas + gennemsigtighed + glød */
-  background: rgba(255, 255, 255, 0.25);  /* vand-agtig gennemsigtighed */
-  backdrop-filter: blur(8px);             /* frostet glas effekt */
+  background: rgba(255, 255, 255, 0.25);  
+  backdrop-filter: blur(8px);             
   -webkit-backdrop-filter: blur(8px);
-  border: 3px solid rgba(255, 255, 255, 0.4); /* boble-kant */
+  border: 3px solid rgba(255, 255, 255, 0.4); 
 
   /* Glans- og glødeeffekter for at ligne en ægte boble */
-  box-shadow:inset 0 0 20px rgba(255, 255, 255, 0.5), /* indvendig highlight */
-  0 0 30px rgba(0, 170, 255, 0.4),         /* blå ydre glød */
+  box-shadow:inset 0 0 20px rgba(255, 255, 255, 0.5), 
+  0 0 30px rgba(0, 170, 255, 0.4),         
   0 0 60px rgba(0, 170, 255, 0.3);
 
-  /* --- Børnevenlig tekst --- */
+  /*  Børnevenlig tekst */
   font-family: "Cherry Bomb One", system-ui;
   font-weight: 400;
-  font-style: normal;                        /* venlig, mørk turkis */
-  font-size: 18px;                       /* større = nemt for børn */
-  line-height: 1.4;                      /* god læsbarhed */
-  letter-spacing: 0.5px;                 /* lille afstand → klar tekst */
+  font-style: normal;                       
+  font-size: 18px;                       
+  line-height: 1.4;                      
+  letter-spacing: 0.5px;                 
   
 
   /* Centrer teksten i boblen */
@@ -326,27 +313,22 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* Start usynlig og lille */
   opacity: 0;
-  transform: scale(0.6);  /* pop-effekt forberedt */
-
-  /* Man kan ikke klikke boblen */
+  transform: scale(0.6);  
   pointer-events: none;
-
   z-index: 1000;
 
   /* Glid-op + fade-in + pop-effekt når .is-visible tilføjes */
   transition:
-    opacity 0.8s ease-out,                                /* fade ind */
-    transform 0.8s cubic-bezier(.15,.87,.41,1.46),        /* pop animation */
-    bottom 0.8s ease-out;                                /* glid op */
+    opacity 0.8s ease-out,                               
+    transform 0.8s cubic-bezier(.15,.87,.41,1.46),        
+    bottom 0.8s ease-out;                               
 }
 
 .facts.is-visible {
-  opacity: 1;         /* Fade ind */
-  bottom: 20px;       /* Boblen glider op til denne position */
-  transform: scale(1); /* Popper op til normal størrelse */
+  opacity: 1;        
+  bottom: 20px;      
+  transform: scale(1); 
 }
 
 /*  INDHOLD I BOBLEN */
@@ -373,13 +355,13 @@ body {
 
 /* FISKENE ANIMATIONER */
 
-/* Gul kirurgfisk (svømmer højre -> venstre) */
+/* Gul kirurgfisk (højre -> venstre) */
 .gul-kirurgfisk {
   position: absolute;
   width: 70px;
   max-width: 20vw;
-  left: 100%;            /* starter ude til højre */
-  bottom: 8vh;           /* fordelt lodret */
+  left: 100%;            
+  bottom: 8vh;          
   z-index: 3;
   animation: swim-gul 10s linear infinite;
   animation-delay: 0s;     
@@ -395,7 +377,7 @@ body {
    100% { transform: translateX(-220vw); }
 }
 
-/* Dværgkejserfisk — (svømmer fra højre mod venstre) */
+/* Dværgkejserfisk — (højre -> venstre) */
 .dvaergkejserfisk {
   position: absolute;
   width: auto;
@@ -420,7 +402,7 @@ body {
   100% { transform: translateX(220vw); } 
 }
 
-/* Paletkirurgfisk (ændret: venstre -> højre) */
+/* Paletkirurgfisk (venstre -> højre) */
 .paletkirurgfisk {
   position: absolute;
   width: 70px;
@@ -463,7 +445,7 @@ body {
   100% { transform: translateX(-220vw); } 
 }
 
-/* Pudsefisk (ændret: venstre -> højre) */
+/* Pudsefisk (venstre -> højre) */
 .pudsefisk {
   position: absolute;
   width: 70px;
@@ -485,7 +467,7 @@ body {
   100% { transform: translateX(220vw); }
 }
 
-/* Hvidstrubet kirurgfisk — (svømmer fra venstre mod højre) */
+/* Hvidstrubet kirurgfisk — (venstre -> højre) */
 .hvidstrubet-kirurgfisk {
   position: absolute;
   width: 70px;
@@ -496,7 +478,7 @@ body {
   animation: swim-hvid-right 20s linear infinite; 
   animation-delay: 4s;
 }
-/* Behold billedets nuværende vending */
+
 .hvidstrubet-kirurgfisk img {
   max-width: 600%;
   height: auto;
@@ -550,23 +532,23 @@ body {
   100% { transform: translateX(-220vw); }
 }
 
-/* KLIK VECTOR – følger pincetfisken */
+/* KLIK VECTOR – der følger pincetfisken */
 .vector-klik {
   position: absolute;
-  width: 70px;          /* samme bredde som fisken */
+  width: 70px;          
   max-width: 12vw;
-  left: 107%;           /* lidt længere til højre = bagved fisken */
-  bottom: 70vh;         /* samme højde som fisken */
-  z-index: 4;           /* lavere end fisken, så den kommer bagved */
+  left: 107%;           
+  bottom: 70vh;         
+  z-index: 4;           
   animation: swim-pincet 20s linear infinite;
-  animation-delay: -6s; /* samme som pincetfisken */
+  animation-delay: -6s; 
 
 }
 
 .vector-klik img {
   width: 100%;
   height: auto;
-  transform: scaleX(1);   /* SPEJLVENDER BILLEDET */
+  transform: scaleX(1);   
 }
 
 /* SØSTJERNE VECTOR */

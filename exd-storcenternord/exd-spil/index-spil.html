@@ -5,38 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fiske spillet</title>
     <link rel="shortcut icon" href="img/klovnfisk.svg" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/spil.css" />
   </head>
 
   <body>
-    <!-- én #game container (fjerner dublet) -->
+    <!-- én #game container -->
     <div id="game">
       <!-- score visning -->
       <div id="score">Point: 0</div>
 
       <!-- fisk (dodger) -->
       <div id="dodger">
-        <img id="dodger-img" src="img/klovnfisk.svg" alt="dodger" />
+        <img id="dodger-img" src="img/dodger/klovnfisk.svg" alt="dodger" />
       </div>
 
       <!-- orm/point -->
       <div id="orm-point">
-        <img id="orm-img" src="img/orm-point.png" alt="orm" />
+        <img id="orm-img" src="img/point/orm-point.png" alt="orm" />
+      </div>
+      <!-- tilbage knap -->
+      <div id="tilbage-knap">
+        <button id="tilbage" onclick="window.location.href='../exd-akvarie/index-akvarie.html'">
+          <img src="img/tilbage/tilbage-knap.png" alt="Tilbage" />
+        </button>
       </div>
 
-      <!-- tilbage-knap -->
-      <button id="tilbage" onclick="window.location.href='../exd-akvarie/index-akvarie.html'">Tilbage</button>
-    </div>
+    </div> 
 
-    <!-- LYD (hold relative stier i exd-spil mappen) -->
+    <!-- LYD  -->
     <audio id="movementSound">
-      <source src="audio/movement_sound.mp3" type="audio/mp3" />
+      <source src="sound/movement_sound.mp3" type="audio/mp3" />
     </audio>
 
     <audio id="gameoverSound">
-      <source src="audio/gameover_sound.mp3" type="audio/mp3" />
+      <source src="sound/gameover_sound.mp3" type="audio/mp3" />
     </audio>
 
-    <script src="js/index.js"></script>
+    <script src="js/spil.js"></script>
   </body>
 </html>

@@ -7,12 +7,10 @@ const game = document.getElementById("game");              // Hele spilområdet
 const ormPoint = document.getElementById("orm-point");     // Ormen (den der giver point)
 const scoreElement = document.getElementById("score");     // Score-tekst på skærmen
 
-// Lyde
+/* LYDE */
 const moveSound = document.getElementById("movementSound");      // Lyd når fisken bevæger sig
-const gameoverSound = document.getElementById("gameoverSound");  // Lyd når fisken rammer en kant
 
 /*    KONSTANTER (Størrelser og værdier) */
-
 const dodgerWidth = 150;   // Fiskens bredde i pixels (samme som CSS)
 const dodgerHeight = 150;  // Fiskens højde i pixels
 const ormSize = 50;        // Ormens størrelse
@@ -21,7 +19,6 @@ let score = 0;             // Startscore = 0
 
 /* STARTPOSITION FOR FISKEN
    - Gør at fisken starter cirka i midten */
-
 dodger.style.left = "625px";
 dodger.style.bottom = "400px";
 
@@ -46,7 +43,7 @@ function moveDodgerLeft() {
   // Tjek at fisken ikke går udenfor venstre kant
   if (left > 0) {
     dodger.style.left = `${left - 30}px`;   // Flyt 30 px til venstre
-    dodger.style.transform = "scaleX(-1)";  // Vend fisken mod venstre
+    dodger.style.transform = "scaleX(-1)";  // Vender fisken mod venstre
     playSoundOnMovement();                  // Afspil lyd
     checkOrmCollision();                    // Tjek om fisken rammer ormen
   } 
@@ -63,7 +60,7 @@ function moveDodgerRight() {
 
   if (left < maxRight) {
     dodger.style.left = `${left + 30}px`;  // Flyt højre
-    dodger.style.transform = "scaleX(1)";  // Vend fisken mod højre
+    dodger.style.transform = "scaleX(1)";  // Vender fisken mod højre
     playSoundOnMovement();
     checkOrmCollision();
   } 
@@ -113,11 +110,6 @@ function playSoundOnMovement() {
   moveSound.play();
 }
 
-// Afspiller væg-lyd ("game over")
-function playSoundOnGameOver() {
-  gameoverSound.currentTime = 0;
-  gameoverSound.play();
-}
 
 /* ORMPLACERING (tilfældige positioner) */
 
