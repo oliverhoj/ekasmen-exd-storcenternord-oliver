@@ -1,5 +1,10 @@
-# ExD – Akvarie (Forbedret Eksamensversion)
-Dette projekt er en forbedret version af mit oprindelige ExD-akvarie udviklet på Multimediedesigneruddannelsens 1. semester. Målet har været at skabe en mere legende, intuitiv og børnevenlig oplevelse for målgruppen 4–6 år gennem forbedret UX/UI, animationer og interaktivitet.
+Eksamensprojekt 
+Oliver Holt Høj
+Multimediedesigner 1. semester
+
+# ExD – Akvarie 
+
+Dette projekt er en forbedret version af mit oprindelige ExD-akvarie udviklet på Multimediedesigner 1. semester. Målet har været at skabe en mere legende, intuitiv og børnevenlig oplevelse for målgruppen 4–6 år gennem forbedret UX/UI, animationer og interaktivitet.
 
 ## Formål
 - Skabe et engagerende, visuelt og letforståeligt univers for børn.
@@ -7,11 +12,17 @@ Dette projekt er en forbedret version af mit oprindelige ExD-akvarie udviklet p�
 - Implementere UX-principper til børn på bagrund af teorier.
 
 ## Indhold
-- En interaktiv startskærm med fiske infomation, forskellige vektor og spil knap
-- Et spil hvor man skal indsamle orme og derefter får point
+- Interaktiv startskærm med fiskeinformation
+- Animerede vektor-elementer koral, fisk, bobler og spilknap.
+- Dynamisk spilknap, der starter spillet
+- Baggrundsanimationer, der skaber undervandsstemning
+
+- Et spil hvor man skal indsamle orme 
+- Pointsystem, der tæller samlet score
+- Bevægelsesstyring med piletaster
 
 ## Hvad er forbedret
-- UX/UI: større klikflader, bedre farvekontraster og tydeligere affordance.
+- UX/UI: større klikflader, bedre farvekontraster.
 - Animationer: rene fiskebevægelser og sway-effekt på koraller.
 - Fakta-boble: ny pop-up med glidende animation og børnevenlig tekst.
 - Spillet: stabil kollisionsdetektion.
